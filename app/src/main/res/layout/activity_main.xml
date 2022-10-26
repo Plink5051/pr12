@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewFruit"
+        android:layout_width="211dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/yabloko" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="398dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewFruit">
+
+        <RadioButton
+            android:id="@+id/RBapple"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="onClick_RadioButton"
+            android:text="Яблоко" />
+
+
+        <RadioButton
+            android:id="@+id/RBpear"
+            android:layout_width="124dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClick_RadioButton"
+            android:text="Груша" />
+
+        <RadioButton
+            android:id="@+id/RBgrape"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick_RadioButton"
+            android:text="Виноград" />
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkBoxApple"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="Яблоко"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        android:onClick="onClick_ChakedBoxes"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxPear"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="2dp"
+        android:text="Груша"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxApple"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxApple"
+        android:onClick="onClick_ChakedBoxes"/>
+
+    <CheckBox
+        android:id="@+id/checkBoxGrape"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:text="Виноград"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxPear"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxPear"
+        android:onClick="onClick_ChakedBoxes"/>
+
+    <ImageView
+        android:id="@+id/imageViewApple"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxGrape"
+        app:srcCompat="@drawable/yabloko" />
+
+    <ImageView
+        android:id="@+id/imageViewPear"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewApple"
+        app:layout_constraintStart_toEndOf="@+id/imageViewApple"
+        app:srcCompat="@drawable/grusha" />
+
+    <ImageView
+        android:id="@+id/imageViewGrape"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewPear"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPear"
+        app:srcCompat="@drawable/vinohrad" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
